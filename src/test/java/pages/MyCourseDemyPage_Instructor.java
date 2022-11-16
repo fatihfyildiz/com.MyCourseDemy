@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import utilities.Driver;
 
 public class MyCourseDemyPage_Instructor {
@@ -42,9 +43,29 @@ public class MyCourseDemyPage_Instructor {
     @FindBy (id = "select2-status-container")
     public WebElement statusLink;
 
-    @FindBy (xpath = "(//*[text()='Active'])[2]")
+    @FindBy (xpath = "(//*[text()='Pending'])[2]")
     public WebElement statusChoosing;
 
+    @FindBy (id = "select2-price-container")
+    public WebElement priceLink;
+
+    @FindBy (xpath = "/html/body/div[2]/div/div[2]/div/div[3]/div/div/div/form/div[3]/div/span/span[1]/span/span[1]")
+    public WebElement priceChoosing;
+
+    @FindBy (xpath = "//button[@type='submit']")
+    public WebElement filterButton;
+
+    @FindBy (xpath = "//input[@type='search']")
+    public WebElement searchBox;
+
+    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[3]")
+    public WebElement threeDots;
+
+    @FindBy (xpath = "//a[@href='https://qualitydemy.com/home/course/web-design-for-developers/53']")
+    public WebElement viewCourseOnFrontend;
+
+    @FindBy (xpath = "//h1[text()='Web Design for Developers']")
+    public WebElement pageRelevantCourse;
 
     //-----------------------------------------GURSEL--------------------------------------------------------//
 
