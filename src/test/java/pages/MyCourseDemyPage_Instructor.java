@@ -13,9 +13,11 @@ public class MyCourseDemyPage_Instructor {
 
     //----------------------------------------FATIH------------------------------------------------------//
 
+    // Homepage
     @FindBy (xpath = "//a[text()='Log in']")
     public WebElement loginLink;
 
+    // Homepage ==> Login Page
     @FindBy (xpath = "//input[@id='login-email']")
     public WebElement emailBox;
 
@@ -28,12 +30,15 @@ public class MyCourseDemyPage_Instructor {
     @FindBy(xpath = "//a[@onclick='cookieAccept();']")
     public WebElement cookies;
 
+    // Homepage ==> Login Page ==> Instructor Page
     @FindBy (linkText = "Instructor")
     public WebElement instructorLink;
 
+    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page
     @FindBy (linkText = "Course manager")
     public WebElement courseManagerLink;
 
+    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page
     @FindBy (id = "select2-category_id-container")
     public WebElement categoriesLink;
 
@@ -64,8 +69,20 @@ public class MyCourseDemyPage_Instructor {
     @FindBy (xpath = "//a[@href='https://qualitydemy.com/home/course/web-design-for-developers/53']")
     public WebElement viewCourseOnFrontend;
 
+    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Relevant course Page
     @FindBy (xpath = "//h1[text()='Web Design for Developers']")
     public WebElement pageRelevantCourse;
+
+    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page
+    @FindBy (xpath = "(//*[text()='Go to course playing page'])[3]")
+    public WebElement goCoursePlayingPage;
+
+    @FindBy (xpath = "(//*[text()='Edit this course'])[3]")
+    public WebElement editThisCourse;
+
+    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Edit course Page
+    @FindBy (xpath = "//h4[@class='page-title']")
+    public WebElement updateEditCourse;
 
     //-----------------------------------------GURSEL--------------------------------------------------------//
 
