@@ -26,8 +26,13 @@ public class QualityDemyPage_Instructor {
     @FindBy (xpath = "//button[text()='Login']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//*[text()='Accept']")
+    public WebElement acceptCookies;
+
+    /* Or, alternatively;
     @FindBy(xpath = "//a[@onclick='cookieAccept();']")
     public WebElement acceptCookies;
+     */
 
     // Homepage ==> Login Page ==> Instructor Page
     @FindBy (linkText = "Instructor")
@@ -41,13 +46,16 @@ public class QualityDemyPage_Instructor {
     @FindBy (id = "select2-category_id-container")
     public WebElement categoriesLink;
 
+    @FindBy (xpath = "(//*[text()='Web Design for Web Developers'])[3]")
+    public WebElement categoryChoosingTC1;
+
     @FindBy (xpath = "(//*[text()='Web Design for Web Developers'])[2]")
-    public WebElement categoryChoosing;
+    public WebElement categoryChoosingTC2;
 
     @FindBy (id = "select2-status-container")
     public WebElement statusLink;
 
-    @FindBy (xpath = "(//*[text()='Pending'])[2]")
+    @FindBy (xpath = "(//span[@title='All'])[1]")
     public WebElement statusChoosing;
 
     @FindBy (id = "select2-price-container")
@@ -62,28 +70,29 @@ public class QualityDemyPage_Instructor {
     @FindBy (xpath = "//input[@type='search']")
     public WebElement searchBox;
 
-    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[3]")
-    public WebElement threeDots3;
+    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[2]")
+    public WebElement threeDots2; // Web Design for Developers
 
-    @FindBy (xpath = "//a[@href='https://qualitydemy.com/home/course/web-design-for-developers/53']")
+    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[3]")
+    public WebElement threeDots3; // Bass Guitar
+
+    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[4]")
+    public WebElement threeDots4; // Piano
+
+    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[1]")
+    public WebElement threeDots1; // English
+
+    @FindBy (xpath = "(//a[text()='View course on frontend'])[2]")
     public WebElement viewCourseOnFrontend;
 
-    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Relevant course Page
-    @FindBy (xpath = "//h1[text()='Web Design for Developers']")
-    public WebElement pageRelevantCourse;
-
-    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page
     @FindBy (xpath = "(//*[text()='Go to course playing page'])[3]")
-    public WebElement goCoursePlayingPage;
+    public WebElement goCoursePlayingPage; // Bass Guitar
 
     @FindBy (xpath = "(//*[text()='Edit this course'])[3]")
-    public WebElement editThisCourse;
+    public WebElement editThisCourse; // Bass Guitar
 
-    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[2]")
-    public WebElement threeDots2;
-
-    @FindBy (xpath = "(//*[text()='Mark as drafted'])[2]")
-    public WebElement markAsDraft;
+    @FindBy (xpath = "(//*[text()='Mark as drafted'])[3]")
+    public WebElement markAsDraft; // Piano ==> Since the first one (English) is already Drafted and the last (Piano) becomes 3
 
     @FindBy (xpath = "(//*[text()='Continue'])[1]")
     public WebElement continueButton;
@@ -91,25 +100,44 @@ public class QualityDemyPage_Instructor {
     @FindBy (xpath = "//span[text()='Draft']")
     public WebElement draft;
 
-    @FindBy (xpath = "(//button[@class='btn btn-sm btn-outline-primary btn-rounded btn-icon'])[1]")
-    public WebElement threeDots1;
-
     @FindBy (xpath = "(//a[text()='Publish this course'])[1]")
-    public WebElement publicThisCourse;
+    public WebElement publishThisCourse; // English
 
     @FindBy (xpath = "(//span[text()='Pending'])[1]")
     public WebElement pending1;
 
-    @FindBy (xpath = "(//a[text()='Delete'])[2]")
+    @FindBy (xpath = "(//a[text()='Delete'])[4]")
     public WebElement delete;
 
-    @FindBy (xpath = "//span[text()='Bass Guitar']")
-    public WebElement bassGuitar;
+    @FindBy (xpath = "//span[text()='Piano']")
+    public WebElement Piano;
+
+    @FindBy (xpath = "//a[@href='https://qualitydemy.com/user/course_form/add_course']")
+    public WebElement addNewCourseButton;
+
+    @FindBy (id = "topbar-userdrop")
+    public WebElement account;
+
+    @FindBy (xpath = "//a[@href='https://qualitydemy.com/login/logout']")
+    public WebElement logout;
+
+    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Relevant course Page
+    @FindBy (xpath = "//h1[text()='Web Design for Developers']")
+    public WebElement pageRelevantCourseTC3; // Web Design for Developers
+
+    @FindBy (xpath = "//h1[text()='Bass Guitar']")
+    public WebElement pageRelevantCourseTC4; // Bass Guitar
 
     // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Edit course Page
     @FindBy (xpath = "//h4[@class='page-title']")
-    public WebElement updateEditCourse;
+    public WebElement updateEditCourse; // Bass Guitar & Web Design for Developers
 
+    @FindBy (xpath = "//a[text()='Web Design for Developers']")
+    public WebElement webDesignForDevelopersTitle;
+
+    // Homepage ==> Login Page ==> Instructor Page ==> Dashboard Page ==> Course manager (Courses) Page ==> Add New Course
+    @FindBy (xpath = "//*[text()='Course adding form']")
+    public WebElement courseAddingForm;
 
     //-----------------------------------------GURSEL--------------------------------------------------------//
 
