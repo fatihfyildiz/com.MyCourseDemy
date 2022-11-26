@@ -116,7 +116,7 @@ public class QualityDemyPage_Instructor {
     public WebElement addNewCourseButton;
 
     @FindBy (id = "topbar-userdrop")
-    public WebElement account;
+    public WebElement accountFatih;
 
     @FindBy (xpath = "//a[@href='https://qualitydemy.com/login/logout']")
     public WebElement logout;
